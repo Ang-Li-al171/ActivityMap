@@ -1,0 +1,90 @@
+﻿ActivityMap
+Authors:
+    The first iteration of these visualizations was created by Hal Beresford.
+    Steve Chall added some additional functionality.
+    Ang Li is currently doing the lion's share of development work.
+
+To run the "shiny" application:
+
+-Download and install R software
+
+-Then download the shiny package by typing in R console 
+
+	install.packages("shiny")
+
+-Type in R console
+
+	library("shiny")	
+
+-Type (Note: slashes in the path are leftward slash --- / )
+
+ 	runApp("~/FullPathOfFolder/")	where the folder contains the ui.R and server.R files
+
+UPDATE(07/18/2013)
+
+!! Please copy all the files in the folder, because a few new files have been added for object decoding
+
+- object interactions tab now gives the option to plot with subjects/object type with a radio button
+- choice of subjects still available when plotting using object type, giving more freedom/choice
+- frequency count statistics about object type for each subject chosen
+- detailed information about each object interacted by each subject. It may be a very long list, so don't choose "all subjects" with a long period of time, when you want to see the details
+- a color/shape legend for object type plot
+- other minor changes
+
+
+UPDATE(07/17/2013)
+
+!! Need to install.packages("pixmap") in order to have conversation heap map working
+!! Please copy all the files in the folder, because a few new files have been added, including a headphone picture and conversation data
+
+- Conversation heap map is working now, with the number of conversations indicated on the building for a specified time-period
+- A drop-down list allows user to choose potential conversations within that period, and it'd identify possible subjects involved.
+- This feature works well when you choose a short time-period, such as one or two days
+- The Conversation map allows position data, easy to verify possible subjects involved
+- Other minor changes, titles, etc.
+
+
+UPDATE (07/11/2013)
+
+!! Need to install.packages("chron") in order to have time selection feature
+
+-able to select time periods, up to seconds, in a day
+-Used Final Survey Data instead of previous survey data. Updated option list for survey plot.
+-New tab for Object Interaction Heat Map, with color legend, and option to list all items as before.
+-New tab for Conversations Heat Map, still in progress.
+-Moved raw data to the fourth tab.
+-Other minors improvements on titles, cosmetics, etc.
+
+
+UPDATE(07/09/2013)
+
+-Removed "Update Plots" button to enable complete interactivity -- automatic update
+-Checking/unchecking "All subjects" now checks/unchecks all the 20 boxes for the user
+-Made the sidebar narrower and the activity map larger (still square) for better view
+-Unused options will not be visible when viewing the "Object & Raw Data" panel
+-Formal DateInput for View By Real Date feature
+-Other minor cosmetic improvements, titles, etc.
+
+
+UPDATE(07/04/2013)
+
+-Much improved performance speed of View By Real Date
+-Added Macro Control in ui.R and server.R to switch between full and anonymous versions.
+-Radio Button choice for view by DayCount or Real Date
+-Slight increase in y-spacing of color legends
+-Code cleaned up according to Google's R Style Guide
+
+UPDATE(07/02/2013)
+
+-Able to view the map by Real Date from 2011/01 to 2012/12
+
+-Object interaction information is presented as an "object - interaction count" format, to capture how many times an object is interacted with by the subject.
+
+UPDATE(06/25/2013):
+
+-Currently working on putting the app on a web server.
+
+-Added survey data plots. All survey question score plots are available in a drop-down list.
+-Added options to include weightPlot and HBA1CPlot. Can hide if necessary.
+-Added color legend option if the box is checked.
+-Added optional panel where the raw data could be viewed.
